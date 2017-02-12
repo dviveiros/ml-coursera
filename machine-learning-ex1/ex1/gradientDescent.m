@@ -17,11 +17,9 @@ for iter = 1:num_iters
     %       of the cost function (computeCost) and gradient here.
     %
 
-
-
-
-
-
+    predictions = X * theta;
+    delta = ((1/m) * ((predictions - y)' * X))';
+    theta = theta - alpha * delta;
 
     % ============================================================
 
